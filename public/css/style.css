@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.6rem;
+}
+
+
+
+/****** HEADER *******/
+
+header {
+	background-image: url("../img/fond.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+ h1 {
+	text-align: center;
+}
+
+ h1 a {
+	color: white;
+}
+
+nav {
+	text-align: right;
+	padding: 50px;
+}
+
+ nav a {
+	color: white;
+	margin: 10px;
+}
+
+/****** MAIN  *******/
+main {
+	padding: 3% 10%;
+}
+
+.back {
+	font-size: 1.8rem;
+	padding: 1%;
+	color: rgb(0, 70, 128);
+	width: fit-content;
+	/* margin: 2% auto; */
+	outline: none;
+	box-shadow: 2px 2px 4px #333;
+	border-radius: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: block;
+}
+
+.divider {
+	height: 1px;
+	width: 80px;
+	background-color: grey;
+	margin: 25px auto;
+}
+
+hr{
+	margin: 20px 0;
+}
+
+
+/********** FORM **********/
+
+form {
+	width: 50%;
+	margin: 20px auto;
+}
+
+fieldset{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: auto;
+	padding: 1%;
+	border-radius: 10px;
+}
+
+input[type="text"] {
+	margin: 10px 0 ;
+}
+
+input[type="submit"] {
+	width: fit-content;
+	padding: 2%;
+	text-transform: uppercase;
+	margin: 10px auto;
+}
+
+/********************/
+/********************/
+
+#story h2 {
+	width: 70%;
+	margin: auto;
+	color: #0cd6b4;
+	text-decoration: underline;
+}
+
+#story section {
+	text-align: center;
+}
+
+#story article {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	margin: 25px auto;
+}
+
+#story h3 {
+	color: #0cd6b4;
+	width: 50%;
+	text-align: left;
+}
+
+article p:nth-child(2){
+	width: 50%;
+	text-align: right;
+}
+article p:nth-child(3){
+	padding: 2%;
+	width: 100%;
+	text-align: left;
+}
+
+/********************/
+/********************/
+
+/********** ADMIN ****/
+
+
+
+/********** FOOTER *************/
+
