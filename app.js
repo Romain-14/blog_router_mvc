@@ -48,7 +48,7 @@ app.use((req, res, next)=>{
         req.session.isLogged = false;
     }
     
-    console.log("res.locals.session ---->",res.locals.session);
+    // console.log("res.locals.session ---->",res.locals.session);
     next();
 });
 
