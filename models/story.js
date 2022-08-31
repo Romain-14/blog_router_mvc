@@ -6,13 +6,11 @@ class Story {
         const [datas] = await pool.execute(query);
         return datas;
     }
-
-    //
-    // getDataWithValue --> la value pour la condition WHERE
-
-
-
     
+    static async getDataWithValue(query, id){
+        const [datas] = await pool.execute(query, [id]);
+        return datas;
+    }    
 
     static async getOneStoryAndComment({id, query1, query2}){ // on destructure notre objet directement
         // et on effectue nos requêtes
@@ -32,7 +30,7 @@ class Story {
     }
 
     static async delete(query, id){
-        const [result] = await pool.execute(query, id);
+        const [result] = await pool.execute(query, [id]);
         return result;
     }
 

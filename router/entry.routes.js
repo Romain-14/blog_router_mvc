@@ -42,11 +42,12 @@ router.post("/signin", async (req, res, next)=>{
     if(!user[0] || !isSamePwd) {
         res.locals.error = "Bad Email or/and Password";
 
-        res.render("layout", {template: "user/entry", typeform: !req.params.signup ? "signin" : "signup"});
+        res.render("layout", {template: "pages/user/entry", typeform: !req.params.signup ? "signin" : "signup"});
 
     } else { 
         req.session.user = {email: email, role: user[0].Role};
         req.session.isLogged = true;
+        if(user[0].Role === "admin") return res.redirect("/admin");
         res.redirect('/');
     }
 

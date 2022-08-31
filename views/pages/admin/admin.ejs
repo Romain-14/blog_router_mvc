@@ -1,43 +1,26 @@
 <main id="admin">
 
     <section>
-        <h2>panel admin<h2>
+        <h2>panel admin</h2>
 
-        <a href="admin/story/add">add story</a>
+        <a href="admin/story/add" class="btn add-btn">add story</a>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>Author</th>
-                    <th>Category</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- récupération depuis la BDD des éléments à afficher via une boucle -->
-                <% for(const story of stories) { %> 
-                <tr>
-                    <td><%= story.Title %></td>
-                    <td><%= story.Contents %></td>
-                    <td><%= story.FirstName %> <%= story.LastName %></td>
-                    <td><%= story.category_title %></td>
-                    <td>
-                        <a href="admin/story/edit/<%= story.postID %>">edit</a>
-                        <a href="admin/story/delete/<%= story.postID %>">delete</a>
-                    </td>
-                </tr>
-                <% } %> 
-            </tbody>
+        <% for(const story of stories) { %> 
+            <article>
+                <h3><span class="bold">Title:</span> <%= story.Title %></h3>
+                <p class="cta truncate"><span class="bold">Story:</span> <%= story.Contents %></p>
+                <p><span class="bold">By:</span> <%= story.FirstName %> <%= story.LastName %></p>
+                <p><span class="bold">In category:</span> <%= story.category_title %></p>
+                <div>
+                    <a href="admin/story/edit/<%= story.postID %>" class="btn edit-btn">edit</a>
+                    <a href="admin/story/delete/<%= story.postID %>" class="btn delete-btn">delete</a>
+                </div>
+                    
+            </article>
 
-        </table>
-
-
-
+        <% } %> 
 
     </section>
-
-
-
 </main>
+
+<script type="module" src="/js/admin.js"></script>

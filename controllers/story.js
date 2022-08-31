@@ -17,7 +17,7 @@ export const oneStory =  async(req, res, next) => {
         // invocation de la méthode du model, on transmets l'objet
         const result = await Story.getOneStoryAndComment(datas);
         // si rien n'est trouvé (ça ne devrait pas être le cas !!), on redirige vers une page d'erreur
-        if(!result[0].length){
+        if(!result){
             res.json({
                 msg: "not found",
             })
